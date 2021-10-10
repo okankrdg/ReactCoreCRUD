@@ -1,0 +1,21 @@
+import React from "react";
+import { useParams, useHistory } from "react-router-dom";
+import { Button } from "react-bootstrap";
+
+const Exception = () => {
+  const params = useParams();
+  const history = useHistory();
+
+  return (
+    <>
+      <div>
+        <p>Hata : {params}</p>
+        <Button variant="primary" onClick={() => history.push("/home")}>
+          Back to Home
+        </Button>
+      </div>
+    </>
+  );
+};
+
+export default Exception;
